@@ -1,0 +1,23 @@
+<div *ngIf="newsList" class="article-container">
+  <div *ngFor="let article of newsList" class="article">
+    <!-- Clickable image with link to open in a new tab -->
+    <a *ngIf="article.urlToImage" [href]="article.urlToImage" target="_blank">
+      <div class="image-container">
+        <img class="article-image" [src]="article.urlToImage" alt="Article Image" />
+      </div>
+    </a>
+
+    <div class="content">
+      <h3>{{ article.title }}</h3>
+      <p>{{ article.description }}</p>
+
+      <div class="details">
+        <p><strong>Source:</strong> {{ article.source?.name }}</p>
+        <p><strong>Author:</strong> {{ article.author || 'Anonymous' }}</p>
+        <p><strong>Published At:</strong> {{ article.publishedAt | date:'medium' }}</p>
+        <p><strong>Summary:</strong> {{ article.content || 'No summary available.'}}</p>
+        <a *ngIf="article.url" [href]="article.url" target="_blank" class="read-more">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>

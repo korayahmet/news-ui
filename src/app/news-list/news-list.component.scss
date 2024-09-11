@@ -1,0 +1,62 @@
+.article {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .article-image {
+    max-width: 500px;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    // Set a fixed width for the container
+    width: 500px;
+    // Center the image horizontally and vertically
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // Add margin to the right of the image
+    margin-right: 20px;
+  }
+
+  .image-container {
+    // Ensure the container has the same height as the image
+    height: 300px; // Set your desired height
+  }
+
+  .article-container {
+    background-color: #f0f0f0;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      margin-top: 0; // Remove default margin for heading
+    }
+
+    p {
+      margin: 5px 0; // Add margin between paragraphs
+    }
+  }
+}
+
+.read-more {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Optional: Hover effect for the article */
+.article:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
